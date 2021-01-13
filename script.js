@@ -4,4 +4,7 @@ let currentRoundNumber = 1;
 
 // Write your code below:
 
-const generateTarget = () => Math.floor(Math.random() * 9) + 1;
+//generateTarget: Returns a random number between 0 and 9.
+const generateTarget = () => Math.floor(Math.random() * 10);
+
+const
