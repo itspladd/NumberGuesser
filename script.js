@@ -7,4 +7,6 @@ let currentRoundNumber = 1;
 //generateTarget: Returns a random number between 0 and 9.
 const generateTarget = () => Math.floor(Math.random() * 10);
 
-const
+function compareGuesses(humanGuess, computerGuess, targetNumber) {
+    
+    }
