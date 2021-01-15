@@ -11,4 +11,13 @@ function compareGuesses(humanGuess, computerGuess, targetNumber) {
 	let humanDistance = humanGuess > targetNumber ? (humanGuess - targetNumber) : (targetNumber - humanGuess)
 	let computerDistance = computerGuess > targetNumber ? (computerGuess - targetNumber) : (targetNumber - computerGuess);
 	console.log( humanDistance <= computerDistance ? true : false);
-    }
+	}
+
+function updateScore(winner) {
+	if (winner === 'human')
+		humanScore++;
+	else if (winner === 'computer')
+		computerScore++;
+	else
+		console.log(`Error updating score. String passed in was '${winner}'`);
+	}
