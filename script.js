@@ -10,8 +10,9 @@ const generateTarget = () => Math.floor(Math.random() * 10);
 //compareGuesses: Takes in three numbers and determines which of the first two numbers is closest to the third.
 //		  Returns TRUE if the first number is closest, and FALSE if the second number is closest.
 function compareGuesses(humanGuess, computerGuess, targetNumber) {
-	let humanDistance = humanGuess > targetNumber ? (humanGuess - targetNumber) : (targetNumber - humanGuess)
-	let computerDistance = computerGuess > targetNumber ? (computerGuess - targetNumber) : (targetNumber - computerGuess);
+	let humanDistance = getAbsoluteDistance(humanGuess, targetNumber);
+	let computerDistance = getAbsoluteDistance(computerGuess, targetNumber);
+	//console.log(`Human distance: ${humanDistance}, computer distance: ${computerDistance}`);
 	return humanDistance <= computerDistance ? true : false;
 	}
 
