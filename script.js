@@ -10,7 +10,7 @@ const generateTarget = () => Math.floor(Math.random() * 10);
 function compareGuesses(humanGuess, computerGuess, targetNumber) {
 	let humanDistance = humanGuess > targetNumber ? (humanGuess - targetNumber) : (targetNumber - humanGuess)
 	let computerDistance = computerGuess > targetNumber ? (computerGuess - targetNumber) : (targetNumber - computerGuess);
-	console.log( humanDistance <= computerDistance ? true : false);
+	return humanDistance <= computerDistance ? true : false;
 	}
 
 function updateScore(winner) {
@@ -21,3 +21,5 @@ function updateScore(winner) {
 	else
 		console.log(`Error updating score. String passed in was '${winner}'`);
 	}
+
+const advanceRound = () => currentRoundNumber++;
